@@ -2,13 +2,27 @@
 ## Cahier des charges — WoodStock (application de gestion de stock pour un négoce de bois)
 
 ## 1. Contexte de l’application
-WoodStock est une application web CRUD conçue pour un négoce de bois. Le but est de gérer de manière claire et fiable le stock, les achats et les ventes, tout en réduisant les erreurs de saisie liées aux quantités, unités et documents.
+WoodStock est une application web CRUD conçue pour un négoce de bois. Le but est de gérer de manière claire et fiable le stock, les achats et les ventes, tout en réduisant les erreurs de saisie liées aux quantités, aux unités et aux documents (commandes, bons de livraison, bons de réception).
 
-L’application propose **une seule interface**. Selon le rôle de l’utilisateur, certains menus, boutons et actions sont affichés ou non, et certaines opérations sont autorisées ou bloquées.
+
+
+Voici une reformulation propre de ta **partie “1. Contexte de l’application”** qui inclut clairement le **site public one-page** + l’**application privée après connexion** (avec gestion par rôles). Tu peux copier-coller tel quel :
 
 ---
 
-## 2. Gestion des accès (une interface, rôles et permissions)
+## 1. Contexte de l’application
+WoodStock est une application web CRUD conçue pour un négoce de bois. Le but est de gérer de manière claire et fiable le stock, les achats et les ventes, tout en réduisant les erreurs de saisie liées aux quantités, aux unités et aux documents (commandes, bons de livraison, bons de réception).
+
+Le projet est composé de **deux espaces complémentaires** :
+
+* **Un site public (one-page)**, qui présente le service de manière simple (présentation, bénéfices, fonctionnalités principales, aperçu de l’interface) et propose un accès à la connexion.
+
+
+* **Une application privée**, accessible après authentification, qui constitue l’outil de gestion interne (stock, ventes, achats, dashboard). Dans cet espace privé, l’interface et les actions disponibles s’adaptent au rôle de l’utilisateur : certains menus, boutons et opérations sont affichés ou non, et certaines actions sensibles (validation, suppression, exports, etc.) peuvent être autorisées ou bloquées selon le profil.
+
+---
+
+## 2. Gestion des accès (espace privé : rôles et permissions)
 ### Rôles
 * **Admin (bureau)** : paramétrage et supervision (référentiels, ventes, achats, validations, dashboard, exports).
 * **Employé (parc)** : saisie opérationnelle et consultation (réceptions, livraisons, stock, historique), avec des droits limités.
